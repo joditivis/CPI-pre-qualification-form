@@ -107,13 +107,13 @@
         <div id="five" style="display:none;">
             <div id="question5" class="question">5. Are you currently in default on any government loans?</div>
             <br>
-            <label class="option_q5 opt"><input type="radio" name="option_q5" value="Yes"/>Yes</label>
-            <label class="option_q5 opt"><input type="radio" name="option_q5" value="No"/>No</label>
+            <label class="option_q5 opt"><input type="radio" name="option_q5" value="Yes" onClick="question5RadioSelected();"/>Yes</label>
+            <label class="option_q5 opt"><input type="radio" name="option_q5" value="No" onClick="question5RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q5"><span id="message_yes_q5" style="color: #ff0000; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
             <p class="container message_no_q5"><span id="message_no_q5" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
-            <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
+            <button id="nextButton" class="next-btn" onClick="loadQuestion6();">Next</button>
         </div>
 
         <div id="six" style="display:none;">
@@ -260,6 +260,28 @@
         function loadQuestion5() {
             $("#four").empty();
             $("#five").show();
+        }
+
+    // question 5
+        function question5RadioSelected() {
+            let selectedOption1 = document.querySelector("input[value='Yes']:checked");
+            let selectedOption2 = document.querySelector("input[value='No']:checked");
+
+            if (selectedOption1) {
+                $("#message_yes_q5").show();
+                $("#message_no_q5").hide();
+                $("#nextButton").hide();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q5").show();
+                $("#message_yes_q5").hide();
+                $("#nextButton").show();
+            }
+        }
+
+        function loadQuestion6() {
+            $("#five").empty();
+            $("#six").show();
         }
     </script>
 
