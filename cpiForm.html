@@ -95,13 +95,13 @@
         <div id="four" style="display:none;">
             <div id="question4" class="question">4. Are you seeking a GED?</div>
             <br>
-            <label class="option_q4 opt"><input type="radio" name="option_q4" value="Yes"/>Yes</label>
-            <label class="option_q4 opt"><input type="radio" name="option_q4" value="No"/>No</label>
+            <label class="option_q4 opt"><input type="radio" name="option_q4" value="Yes" onClick="question4RadioSelected();"/>Yes</label>
+            <label class="option_q4 opt"><input type="radio" name="option_q4" value="No" onClick="question4RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q4"><span id="message_yes_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <p class="container message_no_q4"><span id="message_no_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
-            <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
+            <button id="nextButton" class="next-btn" onClick="loadQuestion5();">Next</button>
         </div>
 
         <div id="five" style="display:none;">
@@ -245,6 +245,21 @@
         function loadQuestion4() {
             $("#three").empty();
             $("#four").show();
+        }
+
+    // question 4
+        function question4RadioSelected() {
+            let selectedOption1 = document.querySelector("input[value='Yes']:checked");
+            let selectedOption2 = document.querySelector("input[value='No']:checked");
+
+            if (selectedOption1, selectedOption2) {
+                $("#message_yes_q4").show();
+            }
+        }
+
+        function loadQuestion5() {
+            $("#four").empty();
+            $("#five").show();
         }
     </script>
 
