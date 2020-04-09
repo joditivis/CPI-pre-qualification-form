@@ -176,7 +176,7 @@
                 <br>
                 Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
             <br>
-            <button id="Submit" class="next-btn" onClick="finish();">Submit</button>
+            <a href='https://star-horse-ayby.squarespace.com/pre-application'><button id="submit-btn" class="next-btn">Complete</button></a>
         </div>
     </div>
 
@@ -252,8 +252,13 @@
             let selectedOption1 = document.querySelector("input[value='Yes']:checked");
             let selectedOption2 = document.querySelector("input[value='No']:checked");
 
-            if (selectedOption1, selectedOption2) {
+            if (selectedOption1) {
                 $("#message_yes_q4").show();
+                $("#message_no_q4").hide();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q4").show();
+                $("#message_yes_q4").hide();
             }
         }
 
@@ -289,8 +294,13 @@
             let selectedOption1 = document.querySelector("input[value='Yes']:checked");
             let selectedOption2 = document.querySelector("input[value='No']:checked");
 
-            if (selectedOption1, selectedOption2) {
+            if (selectedOption1) {
                 $("#message_yes_q6").show();
+                $("#message_no_q6").hide();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q6").show();
+                $("#message_yes_q6").hide();
             }
         }
 
@@ -304,14 +314,80 @@
             let selectedOption1 = document.querySelector("input[value='Yes']:checked");
             let selectedOption2 = document.querySelector("input[value='No']:checked");
 
-            if (selectedOption1, selectedOption2) {
+            if (selectedOption1) {
                 $("#message_yes_q7").show();
+                $("#message_no_q7").hide();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q7").show();
+                $("#message_yes_q7").hide();
             }
         }
 
         function loadQuestion8() {
             $("#seven").empty();
             $("#eight").show();
+        }
+
+    // question 8
+        function question8RadioSelected() {
+            let selectedOption1 = document.querySelector("input[value='Yes']:checked");
+            let selectedOption2 = document.querySelector("input[value='No']:checked");
+
+            if (selectedOption1) {
+                $("#message_yes_q8").show();
+                $("#message_no_q8").hide();
+                $("#nextButton").show();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q8").show();
+                $("#message_yes_q8").hide();
+                $("#nextButton").hide();
+            }
+        }
+
+        function loadQuestion9() {
+            $("#eight").empty();
+            $("#nine").show();
+        }
+
+    // question 9
+        function question9RadioSelected() {
+            let selectedOption1 = document.querySelector("input[value='Yes']:checked");
+            let selectedOption2 = document.querySelector("input[value='No']:checked");
+
+            if (selectedOption1) {
+                $("#message_yes_q9").show();
+                $("#message_no_q9").hide();
+                $("#nextButton").show();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q9").show();
+                $("#message_yes_q9").hide();
+                $("#nextButton").hide();
+            }
+        }
+
+        function loadQuestion10() {
+            $("#nine").empty();
+            $("#ten").show();
+        }
+
+    // question 10
+        function question10RadioSelected() {
+            let selectedOption1 = document.querySelector("input[value='Yes']:checked");
+            let selectedOption2 = document.querySelector("input[value='No']:checked");
+
+            if (selectedOption1) {
+                $("#message_yes_q10").show();
+                $("#message_no_q10").hide();
+                $("#submit-btn").show();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q10").show();
+                $("#message_yes_q10").hide();
+                $("#submit-btn").hide();
+            }
         }
     </script>
 
