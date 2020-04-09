@@ -80,16 +80,16 @@
         <div id="three" style="display:none;">
             <div id="question3" class="question">3. Are you actively seeking, or willing to seek, employment?</div>
             <br>
-            <label class="option_q3 opt"><input type="radio" name="option_q3" value="Yes"/>Yes</label>
-            <label class="option_q3 opt"><input type="radio" name="option_q3" value="No"/>No</label>
+            <label class="option_q3 opt"><input type="radio" name="option_q3" value="Yes" onClick="question3RadioSelected();"/>Yes</label>
+            <label class="option_q3 opt"><input type="radio" name="option_q3" value="No" onClick="question3RadioSelected();"/>No</label>
             <br>
-            <p id="message_yes_q3" class="container message_yes_q3"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p id="message_no_q3" class="container message_no_q3"><span style="color: #ff0000; display:none;">You are not eligible for Career Pathways. Only those who are actively seeking, or willing to seek, employment are eligible for Career Pathways funding.
+            <p class="container message_yes_q3"><span id="message_yes_q3" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q3"><span id="message_no_q3" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. Only those who are actively seeking, or willing to seek, employment are eligible for Career Pathways funding.
                 <br>
                 <br>
                 Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
             <br>
-            <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
+            <button id="nextButton" class="next-btn" onClick="loadQuestion4();">Next</button>
         </div>
 
         <div id="four" style="display:none;">
@@ -98,8 +98,8 @@
             <label class="option_q4 opt"><input type="radio" name="option_q4" value="Yes"/>Yes</label>
             <label class="option_q4 opt"><input type="radio" name="option_q4" value="No"/>No</label>
             <br>
-            <p id="message_yes_q4" class="container message_yes_q4"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p id="message_no_q4" class="container message_no_q4"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q4"><span id="message_yes_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q4"><span id="message_no_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
         </div>
@@ -110,8 +110,8 @@
             <label class="option_q5 opt"><input type="radio" name="option_q5" value="Yes"/>Yes</label>
             <label class="option_q5 opt"><input type="radio" name="option_q5" value="No"/>No</label>
             <br>
-            <p id="message_yes_q5" class="container message_yes_q5"><span style="color: #ff0000; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
-            <p id="message_no_q5" class="container message_no_q5"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q5"><span id="message_yes_q5" style="color: #ff0000; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
+            <p class="container message_no_q5"><span id="message_no_q5" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
         </div>
@@ -122,8 +122,8 @@
             <label class="option_q6 opt"><input type="radio" name="option_q6" value="Yes"/>Yes</label>
             <label class="option_q6 opt"><input type="radio" name="option_q6" value="No"/>No</label>
             <br>
-            <p id="message_yes_q6" class="container message_yes_q6"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p id="message_no_q6" class="container message_no_q6"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q6"><span id="message_yes_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q6"><span id="message_no_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
         </div>
@@ -134,8 +134,8 @@
             <label class="option_q7 opt"><input type="radio" name="option_q7" value="Yes"/>Yes</label>
             <label class="option_q7 opt"><input type="radio" name="option_q7" value="No"/>No</label>
             <br>
-            <p id="message_yes_q7" class="container message_yes_q7"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p id="message_no_q7" class="container message_no_q7"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q7"><span id="message_yes_q7" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q7"><span id="message_no_q7" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
         </div>
@@ -146,20 +146,20 @@
             <label class="option_q8 opt"><input type="radio" name="option_q8" value="Yes"/>Yes</label>
             <label class="option_q8 opt"><input type="radio" name="option_q8" value="No"/>No</label>
             <br>
-            <p id="message_yes_q8" class="container message_yes_q8"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p id="message_no_q8" class="container message_no_q8"><span style="color: #ff0000; display:none;">You must be in good academic standing to be eligible for Career Pathways funding. Please speak to a college advisor to learn more.</span></p>
+            <p class="container message_yes_q8"><span id="message_yes_q8" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q8"><span id="message_no_q8" style="color: #ff0000; display:none;">You must be in good academic standing to be eligible for Career Pathways funding. Please speak to a college advisor to learn more.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
         </div>
 
         <div id="nine" style="display:none;">
-            <div id="question9" class="question">9. Have you filled out the Free Application for Federal Student Aid(FAFSA)?</div>
+            <div id="question" class="question">9. Have you filled out the Free Application for Federal Student Aid(FAFSA)?</div>
             <br>
             <label class="option_q9 opt"><input type="radio" name="option_q9" value="Yes"/>Yes</label>
             <label class="option_q9 opt"><input type="radio" name="option_q9" value="No"/>No</label>
             <br>
-            <p id="message_yes_q9" class="container message_yes_q9"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p id="message_no_q9" class="container message_no_q9"><span style="color: #ff0000; display:none;">You must complete your FAFSA to be eligible for Career Pathways funding. College students are required to go through the process to determine eligibility for Federal student aid.</span></p>
+            <p class="container message_yes_q9"><span id="message_yes_q9" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q9"><span id="message_no_q9" style="color: #ff0000; display:none;">You must complete your FAFSA to be eligible for Career Pathways funding. College students are required to go through the process to determine eligibility for Federal student aid.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadNextQuestion();">Next</button>
         </div>
@@ -170,8 +170,8 @@
             <label class="option_q10 opt"><input type="radio" name="option_q10" value="Yes"/>Yes</label>
             <label class="option_q10 opt"><input type="radio" name="option_q10" value="No"/>No</label>
             <br>
-            <p id="message_yes_q10" class="container message_yes_q10"><span style="color: #008000; display:none;">You may be eligible for Career Pathways. Please complete the form below.</span></p>
-            <p id="message_no_q10" class="container message_no_q10"><span style="color: #ff0000; display:none;">Only those who fall at or below 250% of the federal poverty level will qualify for Career Pathways funding.
+            <p class="container message_yes_q10"><span id="message_yes_q10" style="color: #008000; display:none;">You may be eligible for Career Pathways. Please complete the form below.</span></p>
+            <p class="container message_no_q10"><span id="message_no_q10" style="color: #ff0000; display:none;">Only those who fall at or below 250% of the federal poverty level will qualify for Career Pathways funding.
                 <br>
                 <br>
                 Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
@@ -212,18 +212,39 @@
             if (selectedOption1) {
                 $("#message_yes_q2").show();
                 $("#message_no_q2").hide();
-                $("#nextButton").show();
             }
             else if (selectedOption2) {
                 $("#message_no_q2").show();
                 $("#message_yes_q2").hide();
-                $("#nextButton").hide();
+                $("#nextButton").show();
             }
         }
 
         function loadQuestion3() {
             $("#two").empty();
             $("#three").show();
+        }
+
+    // question 3
+        function question3RadioSelected() {
+            let selectedOption1 = document.querySelector("input[value='Yes']:checked");
+            let selectedOption2 = document.querySelector("input[value='No']:checked");
+
+            if (selectedOption1) {
+                $("#message_yes_q3").show();
+                $("#message_no_q3").hide();
+                $("#nextButton").show();
+            }
+            else if (selectedOption2) {
+                $("#message_no_q3").show();
+                $("#message_yes_q3").hide();
+                $("#nextButton").hide();
+            }
+        }
+
+        function loadQuestion4() {
+            $("#three").empty();
+            $("#four").show();
         }
     </script>
 
