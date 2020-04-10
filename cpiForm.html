@@ -9,39 +9,73 @@
     <style>
         .question {
             color: black;
-            font-size: 17px;
+            font-size: 23px;
         }
 
         .opt {
             color: black;
-            font-size: 17px;
+            font-size: 23px;
         }
-
-        .option {
-            margin-left: 20px;
-        }
+  		
+  		input[value=No] {
+          margin-left: 22px;
+  		}
 
         input[type=radio] {
             border: 0px;
-            width: 1%;
-            height: 2em;
+            width: 2%;
+            height: 1.5rem;
         }
+  
+  		.msg {
+          	font-size: 20px;
+  		}
 
         .next-btn {
             background-color: black;
             border: black;
             color: white;
-            font-size: 20px;
+            font-size: 19px;
             padding: 12px;
             width: 7rem;
-            margin: 0 auto;
-            align-items: center;
         }
 
         .next-btn:hover {
-            background-color: white;
-            color: black;
-            border: white;
+            background-color: rgba(0, 0, 0, 0.733);
+            color: white;
+            border: rgba(0, 0, 0, 0.733);
+        }
+  
+  		table {
+            margin-right: auto;
+            margin-left: auto;
+            border-collapse: separate; 
+            border-spacing: 65px 0px;
+        }
+
+        .table-header {
+            margin-left:20px;
+        }
+
+       .table-text {
+           text-align: center;
+       } 
+  
+  		#submit-btn {
+          	background-color: black;
+            border: black;
+            color: white;
+            font-size: 19px;
+            padding: 12px;
+          	width: 10rem;
+          	display: block;
+          	margin: auto;
+  		}
+  
+  		#submit-btn:hover {
+            background-color: rgba(0, 0, 0, 0.733);
+            color: white;
+            border: rgba(0, 0, 0, 0.733);
         }
     </style>
 
@@ -49,6 +83,7 @@
 </head>
 
 <body>
+
     <div id="quizContainer" class="container">
         <div id="one">
             <div id="question1" class="question">1. Are you the parent/legal guardian of at least one child under the age of 19 that lives in the household?</div>
@@ -56,9 +91,8 @@
             <label class="option_q1 opt"><input type="radio" name="option_q1" value="Yes" onClick="question1RadioSelected();"/>Yes</label>
             <label class="option_q1 opt"><input type="radio" name="option_q1" value="No" onClick="question1RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q1"><span id="message_yes_q1" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q1"><span id="message_no_q1" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. All potential students MUST be parents/legal guardians with full-time custody of at least one child under the age of 19 that lives in the household.
-                <br>
+            <p class="container message_yes_q1 msg"><span id="message_yes_q1" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q1 msg"><span id="message_no_q1" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. All potential students MUST be parents/legal guardians with full-time custody of at least one child under the age of 19 that lives in the household.
                 <br>
                 Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
             <br>
@@ -71,8 +105,8 @@
             <label class="option_q2 opt"><input type="radio" name="option_q2" value="Yes" onClick="question2RadioSelected();"/>Yes</label>
             <label class="option_q2 opt"><input type="radio" name="option_q2" value="No" onClick="question2RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q2"><span id="message_yes_q2" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q2"><span id="message_no_q2" style="color: #008000; display:none;">If you do not participate in any of the programs listed above, you may still qualify. Proceed to next question.</span></p>
+            <p class="container message_yes_q2 msg"><span id="message_yes_q2" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q2 msg"><span id="message_no_q2" style="color: #008000; display:none;">If you do not participate in any of the programs listed above, you may still qualify. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion3();">Next</button>
         </div>
@@ -83,9 +117,8 @@
             <label class="option_q3 opt"><input type="radio" name="option_q3" value="Yes" onClick="question3RadioSelected();"/>Yes</label>
             <label class="option_q3 opt"><input type="radio" name="option_q3" value="No" onClick="question3RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q3"><span id="message_yes_q3" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q3"><span id="message_no_q3" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. Only those who are actively seeking, or willing to seek, employment are eligible for Career Pathways funding.
-                <br>
+            <p class="container message_yes_q3 msg"><span id="message_yes_q3" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q3 msg"><span id="message_no_q3" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. Only those who are actively seeking, or willing to seek, employment are eligible for Career Pathways funding.
                 <br>
                 Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
             <br>
@@ -98,8 +131,8 @@
             <label class="option_q4 opt"><input type="radio" name="option_q4" value="Yes" onClick="question4RadioSelected();"/>Yes</label>
             <label class="option_q4 opt"><input type="radio" name="option_q4" value="No" onClick="question4RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q4"><span id="message_yes_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q4"><span id="message_no_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q4 msg"><span id="message_yes_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q4 msg"><span id="message_no_q4" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion5();">Next</button>
         </div>
@@ -110,8 +143,8 @@
             <label class="option_q5 opt"><input type="radio" name="option_q5" value="Yes" onClick="question5RadioSelected();"/>Yes</label>
             <label class="option_q5 opt"><input type="radio" name="option_q5" value="No" onClick="question5RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q5"><span id="message_yes_q5" style="color: #ff0000; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
-            <p class="container message_no_q5"><span id="message_no_q5" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q5 msg"><span id="message_yes_q5" style="color: #ff0000; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
+            <p class="container message_no_q5 msg"><span id="message_no_q5" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion6();">Next</button>
         </div>
@@ -122,8 +155,8 @@
             <label class="option_q6 opt"><input type="radio" name="option_q6" value="Yes" onClick="question6RadioSelected();"/>Yes</label>
             <label class="option_q6 opt"><input type="radio" name="option_q6" value="No" onClick="question6RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q6"><span id="message_yes_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q6"><span id="message_no_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q6 msg"><span id="message_yes_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q6 msg"><span id="message_no_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion7();">Next</button>
         </div>
@@ -134,8 +167,8 @@
             <label class="option_q7 opt"><input type="radio" name="option_q7" value="Yes" onClick="question7RadioSelected();"/>Yes</label>
             <label class="option_q7 opt"><input type="radio" name="option_q7" value="No" onClick="question7RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q7"><span id="message_yes_q7" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q7"><span id="message_no_q7" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q7 msg"><span id="message_yes_q7" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q7 msg"><span id="message_no_q7" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion8();">Next</button>
         </div>
@@ -146,8 +179,8 @@
             <label class="option_q8 opt"><input type="radio" name="option_q8" value="Yes" onClick="question8RadioSelected();"/>Yes</label>
             <label class="option_q8 opt"><input type="radio" name="option_q8" value="No" onClick="question8RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q8"><span id="message_yes_q8" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q8"><span id="message_no_q8" style="color: #ff0000; display:none;">You must be in good academic standing to be eligible for Career Pathways funding. Please speak to a college advisor to learn more.</span></p>
+            <p class="container message_yes_q8 msg"><span id="message_yes_q8" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q8 msg"><span id="message_no_q8" style="color: #ff0000; display:none;">You must be in good academic standing to be eligible for Career Pathways funding. Please speak to a college advisor to learn more.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion9();">Next</button>
         </div>
@@ -158,8 +191,8 @@
             <label class="option_q9 opt"><input type="radio" name="option_q9" value="Yes" onClick="question9RadioSelected();"/>Yes</label>
             <label class="option_q9 opt"><input type="radio" name="option_q9" value="No" onClick="question9RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q9"><span id="message_yes_q9" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q9"><span id="message_no_q9" style="color: #ff0000; display:none;">You must complete your FAFSA to be eligible for Career Pathways funding. College students are required to go through the process to determine eligibility for Federal student aid.</span></p>
+            <p class="container message_yes_q9 msg"><span id="message_yes_q9" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_no_q9 msg"><span id="message_no_q9" style="color: #ff0000; display:none;">You must complete your FAFSA to be eligible for Career Pathways funding. College students are required to go through the process to determine eligibility for Federal student aid.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion10();">Next</button>
         </div>
@@ -170,13 +203,53 @@
             <label class="option_q10 opt"><input type="radio" name="option_q10" value="Yes" onClick="question10RadioSelected();"/>Yes</label>
             <label class="option_q10 opt"><input type="radio" name="option_q10" value="No" onClick="question10RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q10"><span id="message_yes_q10" style="color: #008000; display:none;">You may be eligible for Career Pathways. Please complete the form below.</span></p>
-            <p class="container message_no_q10"><span id="message_no_q10" style="color: #ff0000; display:none;">Only those who fall at or below 250% of the federal poverty level will qualify for Career Pathways funding.
-                <br>
+            <p class="container message_yes_q10 msg"><span id="message_yes_q10" style="color: #008000; display:none;">You may be eligible for Career Pathways. Please complete the form below.</span></p>
+            <p class="container message_no_q10 msg"><span id="message_no_q10" style="color: #ff0000; display:none;">Only those who fall at or below 250% of the federal poverty level will qualify for Career Pathways funding.
                 <br>
                 Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
+           
+          <br>
+          <table style="text-align: center;">
+                <tr>
+                    <th class="table-header">Number in household*</th>
+                    <th class="table-header">Annual Salary*</th>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Up to $42,275</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Up to $53,325</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Up to $64,375</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Up to $75,425</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Up to $86,475</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Up to $97,525</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Up to $108,575</td>
+                </tr>
+            </table>
+          <br>
+            <p class="table-text">For families/households with more than 8 persons, add $4,320 for each additional person.
             <br>
-            <a href='https://star-horse-ayby.squarespace.com/pre-application'><button id="submit-btn" class="next-btn">Complete</button></a>
+            *2019 Poverty guidelines for the 48 contiguous states and the District of Columbia</p>
+          <br>
+          <br>
+          <a href='https://star-horse-ayby.squarespace.com/pre-application'><button id="submit-btn" class="next-btn">Complete</button></a>
         </div>
     </div>
 
@@ -191,7 +264,7 @@
                 $("#message_yes_q1").show();
                 $("#message_no_q1").hide();
                 $("#nextButton").show();
-            }
+            } 
             else if (selectedOption2) {
                 $("#message_no_q1").show();
                 $("#message_yes_q1").hide();
@@ -200,8 +273,15 @@
         }
 
         function loadQuestion2() {
-            $("#one").empty();
-            $("#two").show();
+            let selectedYes = document.querySelector("input[value='Yes']:checked");
+            
+            if (!selectedYes) {
+                $("#one").show;
+            }
+            else {
+                $("#one").empty();
+                $("#two").show();
+            }
         }
 
     // question 2
@@ -221,8 +301,15 @@
         }
 
         function loadQuestion3() {
-            $("#two").empty();
-            $("#three").show();
+            let selected = document.querySelector("input[name='option_q2']:checked");
+            
+            if (!selected) {
+                $("#two").show;
+            }
+            else {
+                $("#two").empty();
+                $("#three").show();
+            }
         }
 
     // question 3
@@ -243,8 +330,15 @@
         }
 
         function loadQuestion4() {
-            $("#three").empty();
-            $("#four").show();
+            let selectedYes = document.querySelector("input[value='Yes']:checked");
+            
+            if (!selectedYes) {
+                $("#three").show;
+            }
+            else {
+                $("#three").empty();
+                $("#four").show();
+            }
         }
 
     // question 4
@@ -263,8 +357,15 @@
         }
 
         function loadQuestion5() {
-            $("#four").empty();
-            $("#five").show();
+            let selected = document.querySelector("input[name='option_q4']:checked");
+            
+            if (!selected) {
+                $("#four").show;
+            }
+            else {
+                $("#four").empty();
+                $("#five").show();
+            }
         }
 
     // question 5
@@ -285,8 +386,15 @@
         }
 
         function loadQuestion6() {
-            $("#five").empty();
-            $("#six").show();
+            let selectedNo = document.querySelector("input[value='No']:checked");
+            
+            if (!selectedNo) {
+                $("#five").show;
+            }
+            else {
+                $("#five").empty();
+                $("#six").show();
+            }
         }
 
     // question 6
@@ -305,8 +413,15 @@
         }
 
         function loadQuestion7() {
-            $("#six").empty();
-            $("#seven").show();
+            let selected = document.querySelector("input[name='option_q6']:checked");
+            
+            if (!selected) {
+                $("#six").show;
+            }
+            else {
+                $("#six").empty();
+                $("#seven").show();
+            }
         }
 
     // question 7
@@ -325,8 +440,15 @@
         }
 
         function loadQuestion8() {
-            $("#seven").empty();
-            $("#eight").show();
+            let selected = document.querySelector("input[name='option_q7']:checked");
+            
+            if (!selected) {
+                $("#seven").show;
+            }
+            else {
+                $("#seven").empty();
+                $("#eight").show();
+            }
         }
 
     // question 8
@@ -347,8 +469,15 @@
         }
 
         function loadQuestion9() {
-            $("#eight").empty();
-            $("#nine").show();
+            let selectedYes = document.querySelector("input[value='Yes']:checked");
+            
+            if (!selectedYes) {
+                $("#eight").show;
+            }
+            else {
+                $("#eight").empty();
+                $("#nine").show();
+            }
         }
 
     // question 9
@@ -369,8 +498,15 @@
         }
 
         function loadQuestion10() {
-            $("#nine").empty();
-            $("#ten").show();
+            let selectedYes = document.querySelector("input[value='Yes']:checked");
+            
+            if (!selectedYes) {
+                $("#nine").show;
+            }
+            else {
+                $("#nine").empty();
+                $("#ten").show();
+            }
         }
 
     // question 10
