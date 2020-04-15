@@ -7,6 +7,10 @@
     <title>Pre-Qualify</title>
 
     <style>
+        body {
+            background-color: rgb(224, 224, 224);
+        }
+        
         .question {
             color: black;
             font-size: 23px;
@@ -77,6 +81,18 @@
             color: white;
             border: rgba(0, 0, 0, 0.733);
         }
+
+        @media screen and (max-width: 375px) {
+            input[value=No] {
+                margin-left: 22px;
+            }
+
+            input[type=radio] {
+                border: 0px;
+                width: 2%;
+                height: 1.5rem;
+            }
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -92,9 +108,9 @@
             <label class="option_q1 opt"><input type="radio" name="option_q1" value="No" onClick="question1RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q1 msg"><span id="message_yes_q1" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q1 msg"><span id="message_no_q1" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. All potential students MUST be parents/legal guardians with full-time custody of at least one child under the age of 19 that lives in the household.
+            <p class="container message_no_q1 msg"><span id="message_no_q1" style="color: #c22929ce; display:none;">You are not eligible for Career Pathways. All potential students MUST be parents/legal guardians with full-time custody of at least one child under the age of 19 that lives in the household.
                 <br>
-                Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
+                Please visit the <a href="https://scholarships.adhe.edu/" style="color:white;" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion2();">Next</button>
         </div>
@@ -118,9 +134,9 @@
             <label class="option_q3 opt"><input type="radio" name="option_q3" value="No" onClick="question3RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q3 msg"><span id="message_yes_q3" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q3 msg"><span id="message_no_q3" style="color: #ff0000; display:none;">You are not eligible for Career Pathways. Only those who are actively seeking, or willing to seek, employment are eligible for Career Pathways funding.
+            <p class="container message_no_q3 msg"><span id="message_no_q3" style="color: #c22929ce; display:none;">You are not eligible for Career Pathways. Only those who are actively seeking, or willing to seek, employment are eligible for Career Pathways funding.
                 <br>
-                Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
+                Please visit the <a href="https://scholarships.adhe.edu/" style="color:white;" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion4();">Next</button>
         </div>
@@ -143,7 +159,7 @@
             <label class="option_q5 opt"><input type="radio" name="option_q5" value="Yes" onClick="question5RadioSelected();"/>Yes</label>
             <label class="option_q5 opt"><input type="radio" name="option_q5" value="No" onClick="question5RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q5 msg"><span id="message_yes_q5" style="color: #ff0000; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
+            <p class="container message_yes_q5 msg"><span id="message_yes_q5" style="color: #c22929ce; display:none;">You will not qualify for Career Pathways until default status is cleared.</span></p>
             <p class="container message_no_q5 msg"><span id="message_no_q5" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion6();">Next</button>
@@ -155,9 +171,10 @@
             <label class="option_q6 opt"><input type="radio" name="option_q6" value="Yes" onClick="question6RadioSelected();"/>Yes</label>
             <label class="option_q6 opt"><input type="radio" name="option_q6" value="No" onClick="question6RadioSelected();"/>No</label>
             <br>
-            <p class="container message_yes_q6 msg"><span id="message_yes_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
+            <p class="container message_yes_q6 msg"><span id="message_yes_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to question 9.</span></p>
             <p class="container message_no_q6 msg"><span id="message_no_q6" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
             <br>
+            <button id="nextButtonYes" class="next-btn" style="display:none;" onClick="skipToQuestion9();">Next</button>
             <button id="nextButton" class="next-btn" onClick="loadQuestion7();">Next</button>
         </div>
 
@@ -180,7 +197,7 @@
             <label class="option_q8 opt"><input type="radio" name="option_q8" value="No" onClick="question8RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q8 msg"><span id="message_yes_q8" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q8 msg"><span id="message_no_q8" style="color: #ff0000; display:none;">You must be in good academic standing to be eligible for Career Pathways funding. Please speak to a college advisor to learn more.</span></p>
+            <p class="container message_no_q8 msg"><span id="message_no_q8" style="color: #c22929ce; display:none;">You must be in good academic standing to be eligible for Career Pathways funding. Please speak to a college advisor to learn more.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion9();">Next</button>
         </div>
@@ -192,7 +209,7 @@
             <label class="option_q9 opt"><input type="radio" name="option_q9" value="No" onClick="question9RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q9 msg"><span id="message_yes_q9" style="color: #008000; display:none;">You may be eligible for Career Pathways. Proceed to next question.</span></p>
-            <p class="container message_no_q9 msg"><span id="message_no_q9" style="color: #ff0000; display:none;">You must complete your FAFSA to be eligible for Career Pathways funding. College students are required to go through the process to determine eligibility for Federal student aid.</span></p>
+            <p class="container message_no_q9 msg"><span id="message_no_q9" style="color: #c22929ce; display:none;">You must complete your FAFSA to be eligible for Career Pathways funding. College students are required to go through the process to determine eligibility for Federal student aid.</span></p>
             <br>
             <button id="nextButton" class="next-btn" onClick="loadQuestion10();">Next</button>
         </div>
@@ -204,9 +221,9 @@
             <label class="option_q10 opt"><input type="radio" name="option_q10" value="No" onClick="question10RadioSelected();"/>No</label>
             <br>
             <p class="container message_yes_q10 msg"><span id="message_yes_q10" style="color: #008000; display:none;">You may be eligible for Career Pathways. Please complete the form below.</span></p>
-            <p class="container message_no_q10 msg"><span id="message_no_q10" style="color: #ff0000; display:none;">Only those who fall at or below 250% of the federal poverty level will qualify for Career Pathways funding.
+            <p class="container message_no_q10 msg"><span id="message_no_q10" style="color: #c22929ce; display:none;">Only those who fall at or below 250% of the federal poverty level will qualify for Career Pathways funding.
                 <br>
-                Please visit the <a href="https://scholarships.adhe.edu/" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
+                Please visit the <a href="https://scholarships.adhe.edu/" style="color:white;" target="_blank">Arkansas Division of Higher Education</a> to learn more about your college funding options.</span></p>
            
           <br>
           <table style="text-align: center;">
@@ -405,10 +422,14 @@
             if (selectedOption1) {
                 $("#message_yes_q6").show();
                 $("#message_no_q6").hide();
+                $("#nextButton").hide();
+                $("#nextButtonYes").show();
             }
             else if (selectedOption2) {
                 $("#message_no_q6").show();
                 $("#message_yes_q6").hide();
+                $("#nextButtonYes").hide();
+                $("#nextButton").show();
             }
         }
 
@@ -421,6 +442,15 @@
             else {
                 $("#six").empty();
                 $("#seven").show();
+            }
+        }
+
+        function skipToQuestion9() {
+            let selectedYes = document.querySelector("input[value='Yes']:checked");
+
+            if (selectedYes) {
+                $("#six").empty();
+                $("#nine").show();
             }
         }
 
